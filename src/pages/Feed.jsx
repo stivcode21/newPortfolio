@@ -1,8 +1,11 @@
 import React from 'react'
+import MainLayout from '../layouts/MainLayout'
 
 const Feed = () => {
     return (
-        <div>Feed</div>
+        <MainLayout>
+            <div className='text-white'>Feed</div>
+        </MainLayout>
     )
 }
 

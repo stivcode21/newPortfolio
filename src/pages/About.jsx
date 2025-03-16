@@ -1,8 +1,11 @@
 import React from 'react'
+import MainLayout from '../layouts/MainLayout'
 
 const About = () => {
     return (
-        <div>About</div>
+        <MainLayout>
+            <div className='text-white'>About</div>
+        </MainLayout>
     )
 }
 
