@@ -3,7 +3,9 @@ import RouterController from "./RouterController"
 function App() {
 
   return (
-    <RouterController />
+    <div className="h-full w-full">
+      <RouterController />
+    </div>
   )
 }
 
