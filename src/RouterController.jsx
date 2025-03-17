@@ -8,7 +8,6 @@ import Guestbook from './pages/Guestbook';
 const RouterController = () => {
     const routes = [
         { path: "/", element: <Feed /> },
-        { path: "/feed", element: <Feed /> },
         { path: "/about", element: <About /> },
         { path: "/projects", element: <Projects /> },
         { path: "/guestbook", element: <Guestbook /> },
