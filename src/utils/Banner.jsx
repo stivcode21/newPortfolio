@@ -3,18 +3,18 @@ const Banner = () => {
         <div className="flex items-start justify-center">
             <div className="w-full text-white rounded-lg">
                 {/* Header con animación */}
-                <div className="relative w-full h-60 bg-[#cce7ff] flex justify-center items-center">
+                <div className="relative w-full h-64 bg-[#cce7ff] flex justify-center items-center">
                     {/* Simulación de animación con un avión */}
                     <img
-                        src="https://cdn-icons-png.flaticon.com/512/523/523140.png"
+                        src="https://i.redd.it/n5asj8qa4qcc1.gif"
                         alt="Flying plane"
-                        className="w-20 animate-bounce"
+                        className="w-full h-64 object-center object-cover"
                     />
                     <div className="flex justify-center absolute -bottom-20 left-12">
                         <img
-                            src="./logo-koalav2.png" // Reemplaza con la imagen real
+                            src="https://i.ibb.co/gb80mXcw/Blue-and-Red-Infinity-Technology-Logo.gif" // Reemplaza con la imagen real
                             alt="Profile"
-                            className="w-36 h-36 rounded-full border-4 object-cover border-[#121212]"
+                            className="w-36 h-36 rounded-full border-4 object-cover object-center border-white"
                         />
                     </div>
                 </div>

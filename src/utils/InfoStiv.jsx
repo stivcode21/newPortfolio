@@ -19,16 +19,16 @@ const InfoStiv = () => {
             </div>
 
             {/* Contenido Principal */}
-            <div className="padding-x mt-8">
+            <div className="padding-x mt-4">
                 {/* Nombre y descripción */}
-                <h2 className={clsx("text-3xl font-bold", themes[theme].text)}>Stiven Tapasco</h2>
-                <p className={clsx("mt-2", themes.color.textGray)}>Brings ideas to life with code! ✨</p>
-                <p className={clsx("text-sm mt-2", themes.color.textGray)}>
+                <h2 className={clsx("text-4xl font-bold", themes[theme].text)}>Stiven Tapasco</h2>
+                <p className={clsx("mt-2", themes[theme].text)}>Brings ideas to life with code! ✨</p>
+                <p className={clsx("text-sm mt-1", themes[theme].text)}>
                     Senior Web Engineer. Creative Developer. Content Creator. Whimsical Specialist.
                 </p>
 
                 {/* Información extra */}
-                <div className={clsx("flex justify-start gap-4 mt-4 text-sm font-semibold", themes.color.textGray)}>
+                <div className={clsx("flex justify-start gap-4 mt-4 font-semibold", themes[theme].textGray)}>
                     <div className="flex items-center gap-1">
                         <BriefcaseIcon className="w-4 h-4" />
                         Available

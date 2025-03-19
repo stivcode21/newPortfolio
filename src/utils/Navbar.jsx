@@ -22,7 +22,7 @@ const Navbar = () => {
                         to={link.path}
                         className={({ isActive }) =>
                             clsx(`relative px-4 py-2 font-semibold transition-all ease-in-out text-sm 
-                            ${isActive ? `${themes[theme].text} border-b-3 border-b-[#10b981]` : themes.color.textGray}`)
+                            ${isActive ? `${themes[theme].text} border-b-3 border-b-[#10b981]` : themes[theme].textGray}`)
                         }>
                         {link.name}
                         {/* Barra inferior animada con ID para modificar en CSS */}

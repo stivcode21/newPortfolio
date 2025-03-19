@@ -51,3 +51,24 @@ a:hover #nav-indicator,
 a.active #nav-indicator {
   width: 100%;
 }
+
+/* Estilos para navegadores basados en WebKit (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+  width: 8px; /* Ancho de la barra de desplazamiento */
+}
+
+/* Fondo de la barra de scroll */
+::-webkit-scrollbar-track {
+  background: #022c22; /* primary950 */
+}
+
+/* Barra de desplazamiento */
+::-webkit-scrollbar-thumb {
+  background: #064e3b; /* primary900 */
+  border-radius: 4px; /* Bordes redondeados */
+}
+
+/* Efecto al pasar el mouse */
+::-webkit-scrollbar-thumb:hover {
+  background: #086849; /* Un tono más claro para el hover */
+}

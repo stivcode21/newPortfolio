@@ -1,4 +1,8 @@
-import { HeartIcon, PinIcon } from "lucide-react";
+import { PinIcon } from "lucide-react";
+import { useThemeStore } from "../../store/themeStore";
+import { themes } from "../../theme";
+import clsx from "clsx";
+import { HeartIcon } from "@heroicons/react/24/solid";
 
 const Post = ({
     pinned = false,
@@ -8,11 +12,13 @@ const Post = ({
     content,
     image,
 }) => {
+    const { theme } = useThemeStore();
+
     return (
-        <div className="w-full py-4 padding-x rounded-lg text-white">
+        <div className={clsx("w-full py-4 padding-x rounded-lg", themes[theme].text)}>
             {pinned && (
-                <div className="flex items-center text-gray-400 text-sm mb-2">
-                    <PinIcon className="h-4 w-4 mr-1" /> Pinned Post
+                <div className={clsx("flex items-center font-medium text-xs mb-2", themes[theme].textGray)}>
+                    <PinIcon className="h-4 w-4 mr-1 fill-[#868E96]" /> Pinned Post
                 </div>
             )}
             <div className="flex items-center gap-2">
@@ -28,10 +34,10 @@ const Post = ({
                         <p className="font-semibold flex items-center gap-1">
                             Stivcode <span className="text-yellow-400">✨</span>
                         </p>
-                        <p className="text-gray-400 text-sm">{date}</p>
+                        <p className={clsx("text-sm", themes[theme].textGray)}>{date}</p>
                     </div>
                     {/* Etiqueta */}
-                    <span className="bg-gray-500 w-fit text-sm px-2 py-1 rounded-full text-white">
+                    <span className="bg-[#495057] w-fit text-sm px-3 py-1 rounded-full text-white">
                         {tag}
                     </span>
                 </div>
@@ -39,13 +45,13 @@ const Post = ({
 
             {/* Contenedor post */}
             <div className="ml-12">
-                <h2 className="text-xl font-bold mt-2">{title}</h2>
-                <p className="text-gray-300 mt-1">{content}</p>
+                <h2 className="text-2xl font-bold mt-2">{title}</h2>
+                <p className="mt-1">{content}</p>
                 {image && (
                     <img src={image} alt="Post content" className="rounded-lg object-center object-cover border mt-3 w-[520px] h-[420px]" />
                 )}
-                <div className="flex justify-end items-center text-gray-400 mt-3 md:mr-16">
-                    <HeartIcon className="h-6 w-6 cursor-pointer hover:text-red-500" />
+                <div className="flex justify-end items-center mt-3 md:mr-16">
+                    <HeartIcon className="h-6 w-6 cursor-pointer stroke-2 stroke-[#4C5258] hover:stroke-red-500 fill-transparent hover:fill-red-500" />
                 </div>
             </div>
         </div>
