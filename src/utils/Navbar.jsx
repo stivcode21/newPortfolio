@@ -1,4 +1,7 @@
+import clsx from "clsx";
 import { NavLink } from "react-router-dom";
+import { themes } from "../theme";
+import { useThemeStore } from "../store/themeStore";
 
 const navLinks = [
     { name: "Feed", path: "/" },
@@ -8,7 +11,7 @@ const navLinks = [
 ];
 
 const Navbar = () => {
-
+    const { theme } = useThemeStore();
 
     return (
         <nav className="w-full py-4 my-4 padding-x">
@@ -18,11 +21,10 @@ const Navbar = () => {
                         key={link.name}
                         to={link.path}
                         className={({ isActive }) =>
-                            `relative px-4 py-2 font-semibold transition-all ease-in-out text-sm ${isActive ? "text-white border-b-3 border-b-[var(--primary-500)]" : "text-gray-500"
-                            }`}>
-
+                            clsx(`relative px-4 py-2 font-semibold transition-all ease-in-out text-sm 
+                            ${isActive ? `${themes[theme].text} border-b-3 border-b-[#10b981]` : themes.color.textGray}`)
+                        }>
                         {link.name}
-
                         {/* Barra inferior animada con ID para modificar en CSS */}
                         <div className="flex justify-center transition-all ease-in-out" >
                             <span id="nav-indicator" className={({ isActive }) => `${isActive ? "w-full" : "w-0"}`} ></span>
