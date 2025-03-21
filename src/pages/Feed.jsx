@@ -6,9 +6,9 @@ import POSTS from '../data/Posts'
 const Feed = () => {
     return (
         <MainLayout>
-            {POSTS.map((post) => (
+            {POSTS.map((post, i) => (
                 <Post
-                    key={post.title}
+                    key={i}
                     pinned={post.pinned}
                     date={post.date}
                     tag={post.tag}

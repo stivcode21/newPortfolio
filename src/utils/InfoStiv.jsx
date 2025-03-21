@@ -11,7 +11,7 @@ const InfoStiv = () => {
         <>
             {/* Botón de follow */}
             <div className="padding-x w-full flex justify-end mt-6">
-                <button className={clsx("button-theme flex items-center gap-2 font-bold py-2 px-4 rounded-full transition-all ease-in-out",
+                <button className={clsx("button-theme flex items-center gap-2 font-bold py-2 px-4 rounded-xl transition-all ease-in-out",
                     themes[theme].buttonTheme
                 )}>
                     Follow <span className="text-sm"><Github size={20} /></span>
@@ -21,8 +21,12 @@ const InfoStiv = () => {
             {/* Contenido Principal */}
             <div className="padding-x mt-4">
                 {/* Nombre y descripción */}
-                <h2 className={clsx("text-4xl font-bold", themes[theme].text)}>Stiven Tapasco</h2>
-                <p className={clsx("mt-2", themes[theme].text)}>Brings ideas to life with code! ✨</p>
+                {/* https://cdn3.emoji.gg/emojis/1134-verified-animated.gif */}
+                <h2 className={clsx("text-4xl font-bold flex items-center gap-2", themes[theme].text)}>Stiven Tapasco <span><img src="./Verified.gif" alt="icon-verify" className="w-7 h-7" /></span></h2>
+                <p className={clsx("text-sm", themes[theme].textGray)}>
+                    Stivcode21
+                </p>
+                <p className={clsx("mt-2", themes[theme].text)}>Brings ideas to life with code!</p>
                 <p className={clsx("text-sm mt-1", themes[theme].text)}>
                     Senior Web Engineer. Creative Developer. Content Creator. Whimsical Specialist.
                 </p>

@@ -4,6 +4,7 @@ import Header from '../utils/Header'
 import InfoStiv from '../utils/InfoStiv'
 import Navbar from '../utils/Navbar'
 import { useThemeStore } from '../store/themeStore'
+import Footer from '../utils/Footer'
 
 const MainLayout = ({ children }) => {
     const { theme } = useThemeStore();
@@ -18,6 +19,7 @@ const MainLayout = ({ children }) => {
                 <InfoStiv />
                 <Navbar />
                 {children}
+                <Footer />
             </div>
         </div>
     )

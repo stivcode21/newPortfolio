@@ -8,15 +8,19 @@ export const themes = {
   },
   light: {
     background: "bg-[#ecfdf5] text-black", // Fondo claro
-    buttonTheme: "bg-[#064e3b] hover:bg-[#10b981] cursor-pointer",
+    buttonTheme:
+      "bg-[#006239] hover:bg-[#246F4D] border-2 border-[#138253] hover:border-[#3BC888] cursor-pointer",
     text: "text-black",
-    textPrimary: "text-[#064e3b]",
-    textGray: "text-[#4C5258]",
+    fill: "fill-black",
+    textPrimary: "text-[#006239]",
+    textGray: "text-[#303438]",
   },
   dark: {
     background: "bg-[#16191d] text-white", // Fondo oscuro
-    buttonTheme: "bg-[#10b981] hover:bg-[#064e3b] cursor-pointer",
+    buttonTheme:
+      "bg-[#006239] hover:bg-[#246F4D] border-2 border-[#138253] hover:border-[#3BC888] cursor-pointer",
     text: "text-white",
+    fill: "fill-white",
     textPrimary: "text-[#10b981]",
     textGray: "text-[#868E96]",
   },
