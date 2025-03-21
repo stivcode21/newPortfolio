@@ -32,7 +32,8 @@ const Post = ({
                     {/* info post */}
                     <div className="flex gap-4 items-center">
                         <p className="font-bold flex items-center gap-1">
-                            Stivcode21 <span><img src="./Verified.gif" alt="icon-verify" className="w-4 h-4" /></span>
+                            Stivcode21
+                            <span><img src="./Verified.gif" alt="icon-verify" className="w-3 h-3" /></span>
                         </p>
                         <p className={clsx("text-sm", themes[theme].textGray)}>{date}</p>
                     </div>

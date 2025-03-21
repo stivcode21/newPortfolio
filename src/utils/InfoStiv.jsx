@@ -21,8 +21,9 @@ const InfoStiv = () => {
             {/* Contenido Principal */}
             <div className="padding-x mt-4">
                 {/* Nombre y descripción */}
-                {/* https://cdn3.emoji.gg/emojis/1134-verified-animated.gif */}
-                <h2 className={clsx("text-4xl font-bold flex items-center gap-2", themes[theme].text)}>Stiven Tapasco <span><img src="./Verified.gif" alt="icon-verify" className="w-7 h-7" /></span></h2>
+                <h2 className={clsx("text-4xl font-bold flex items-center gap-2", themes[theme].text)}>Stiven Tapasco
+                    <span><img src="./Verified.gif" alt="icon-verify" className="w-6 h-6 mt-1" /></span>
+                </h2>
                 <p className={clsx("text-sm", themes[theme].textGray)}>
                     Stivcode21
                 </p>
