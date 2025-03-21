@@ -1,10 +1,11 @@
 import React from 'react'
 import MainLayout from '../layouts/MainLayout'
+import AboutMe from '../components/about/AboutMe'
 
 const About = () => {
     return (
         <MainLayout>
-            <div className='text-white'>About</div>
+            <AboutMe />
         </MainLayout>
     )
 }
