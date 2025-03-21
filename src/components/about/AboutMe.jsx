@@ -1,3 +1,7 @@
+import { useThemeStore } from "../../store/themeStore";
+import { themes } from "../../theme";
+import clsx from "clsx";
+
 const Texts = [
     "Siempre me ha apasionado entender cómo funcionan las cosas, y durante tres años trabajé como mecánico. Me gustaba mi profesión, pero un día, por pura curiosidad, vi un video sobre programación y algo en mí hizo clic. Decidí aprender más por mi cuenta y, tras ocho meses de estudio intensivo, tomando cada noche como una oportunidad para mejorar, tomé la decisión más grande de mi vida: dejar mi trabajo para dedicarme por completo al desarrollo web.",
     "Desde entonces, mi enfoque ha sido claro: crear, aprender y mejorar cada día. Para mí, el código es más que una herramienta; es la llave que abre infinitas posibilidades. Me apasiona la programación creativa y el código limpio, y disfruto compartir este mundo con otros, lo que me ha llevado a estar muy activo en comunidades de Discord, donde aprendo y colaboro con otros desarrolladores.",
@@ -9,8 +13,10 @@ const Texts = [
 ]
 
 const AboutMe = () => {
+    const { theme } = useThemeStore();
+
     return (
-        <div className="padding-x flex flex-col gap-4">
+        <div className={clsx("padding-x flex flex-col gap-7", themes[theme].text)}>
             <div>
                 <h1 className="text-3xl font-bold mb-2">¡HOLA! 👋</h1>
                 <p>Soy StivCode, un desarrollador web que pasó de solucionar problemas mecánicos a resolver desafíos con código.</p>

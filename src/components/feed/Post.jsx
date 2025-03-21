@@ -30,15 +30,15 @@ const Post = ({
                 />
                 <div className="flex flex-col gap-1">
                     {/* info post */}
-                    <div className="flex gap-4 items-center">
+                    <div className="flex gap-3 items-center">
                         <p className="font-bold flex items-center gap-1">
                             Stivcode21
                             <span><img src="./Verified.gif" alt="icon-verify" className="w-3 h-3" /></span>
                         </p>
-                        <p className={clsx("text-sm", themes[theme].textGray)}>{date}</p>
+                        <p className={clsx("text-xs flex items-center gap-2", themes[theme].textGray)}><div className="w-1 h-1 bg-[#868E96] rounded-full"></div>{date}</p>
                     </div>
                     {/* Etiqueta */}
-                    <span className="bg-[#495057] w-fit text-sm px-3 py-1 rounded-full text-white">
+                    <span className="bg-[#495057] w-fit text-xs px-3 py-1 rounded-full font-bold text-white">
                         {tag}
                     </span>
                 </div>
@@ -47,11 +47,11 @@ const Post = ({
             {/* Contenedor post */}
             <div className="ml-12">
                 <h2 className="text-2xl font-bold mt-2">{title}</h2>
-                <p className="mt-1">{content}</p>
+                <p className="mt-1 md:mr-4">{content}</p>
                 {image && (
-                    <img src={image} alt="Post content" className="rounded-lg object-center object-cover border mt-3 w-[520px] h-[420px]" />
+                    <img src={image} alt="Post content" className="rounded-lg object-center object-cover mt-3 w-[400px] h-[300px] md:w-[550px] md:h-[450px]" />
                 )}
-                <div className="flex justify-end items-center mt-3 md:mr-16">
+                <div className="flex justify-end items-center mt-3 md:mr-10">
                     <HeartIcon className="h-6 w-6 cursor-pointer stroke-2 stroke-[#4C5258] hover:stroke-red-500 fill-transparent hover:fill-red-500" />
                 </div>
             </div>

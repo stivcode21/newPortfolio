@@ -10,7 +10,7 @@ const Banner = () => {
                         alt="Flying plane"
                         className="w-full h-64 object-center object-cover"
                     />
-                    <div className="flex justify-center absolute -bottom-20 left-12">
+                    <div className="flex justify-center absolute -bottom-20 left-6 md:left-14">
                         <img
                             src="https://i.ibb.co/gb80mXcw/Blue-and-Red-Infinity-Technology-Logo.gif" // Reemplaza con la imagen real
                             alt="Profile"
