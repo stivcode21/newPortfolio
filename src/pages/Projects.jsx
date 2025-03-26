@@ -1,9 +1,12 @@
+import ImageSlider from '../components/projects/ImageSlider'
 import MainLayout from '../layouts/MainLayout'
 
 const Projects = () => {
     return (
         <MainLayout>
-            <div className='text-white'>Projects</div>
+            <div className="padding-x">
+                <ImageSlider />
+            </div>
         </MainLayout>
     )
 }
