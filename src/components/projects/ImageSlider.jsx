@@ -4,9 +4,9 @@ import '@splidejs/splide/css';
 
 // Array de imágenes para el slider
 const sliderImages = [
-    "/images/pexels-1.jpg",
-    "/images/pexels-2.jpg",
-    "/images/pexels-3.jpg",
+    "/images/urbanShop.png",
+    "/images/frameonix.png",
+    "/images/viflow.png",
     "/images/pexels-4.jpg",
     "/images/pexels-5.jpg",
 ];
@@ -64,7 +64,7 @@ const ImageSlider = () => {
     }, []);
 
     return (
-        <div className="flex relative flex-col items-center w-full max-w-4xl mx-auto">
+        <div className="flex relative flex-col items-center w-full mx-auto">
             {/* Imagen destacada */}
             <div className="w-full max-h-[400px] flex justify-center items-center mb-4">
                 <img
@@ -75,11 +75,11 @@ const ImageSlider = () => {
             </div>
 
             {/* Carrusel con Splide */}
-            <Splide ref={sliderRef} options={splideOptions} className="w-1/2 absolute bottom-10 right-20 z-20 border">
+            <Splide ref={sliderRef} options={splideOptions} className="w-1/2 absolute bottom-30 left-25 md:left-38 z-20">
                 {sliderImages.map((img, i) => (
                     <SplideSlide key={i} ref={(e) => (slidesRef.current[i] = e)} data-index={i}>
-                        <div className="cursor-pointer border-2 border-transparent hover:border-blue-500 rounded-lg">
-                            <p>{img}</p>
+                        <div className="cursor-pointer border-2 border-transparent rounded-lg">
+                            <img src={img} alt={`Slide ${i}`} className="w-full h-[150px] object-contain rounded-lg" />
                         </div>
                     </SplideSlide>
                 ))}
