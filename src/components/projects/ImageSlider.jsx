@@ -7,8 +7,8 @@ const sliderImages = [
     "/images/urbanShop.png",
     "/images/frameonix.png",
     "/images/viflow.png",
-    "/images/pexels-4.jpg",
-    "/images/pexels-5.jpg",
+    "/images/cineverse.png",
+    "/images/wpp-clone.png",
 ];
 
 // Array de imágenes para el contenedor principal
@@ -35,7 +35,7 @@ const ImageSlider = () => {
         drag: true,  // Permite arrastrar con el mouse
         keyboard: 'global',
         focus: 'center',
-        gap: '10px',
+        gap: '20px',
         breakpoints: {
             1024: { perPage: 2 },
             768: { perPage: 2 },
@@ -66,16 +66,16 @@ const ImageSlider = () => {
     return (
         <div className="flex relative flex-col items-center w-full mx-auto">
             {/* Imagen destacada */}
-            <div className="w-full max-h-[400px] flex justify-center items-center mb-4">
+            <div className="w-full max-h-[500px] flex justify-center items-center">
                 <img
                     src={selectedImage}
                     alt="Preview"
-                    className="w-full h-[400px] object-cover rounded-lg shadow-lg"
+                    className="w-full h-[500px] object-cover rounded-lg shadow-lg"
                 />
             </div>
 
             {/* Carrusel con Splide */}
-            <Splide ref={sliderRef} options={splideOptions} className="w-1/2 absolute bottom-30 left-25 md:left-38 z-20">
+            <Splide ref={sliderRef} options={splideOptions} className="w-[60%] absolute bottom-35 left-22 md:left-32 z-20">
                 {sliderImages.map((img, i) => (
                     <SplideSlide key={i} ref={(e) => (slidesRef.current[i] = e)} data-index={i}>
                         <div className="cursor-pointer border-2 border-transparent rounded-lg">
